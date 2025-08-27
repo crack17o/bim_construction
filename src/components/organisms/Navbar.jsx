@@ -75,7 +75,8 @@ const NavItem = styled(Link)`
   font-weight: 500;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
   
   &:after {
     content: '';
@@ -85,7 +86,7 @@ const NavItem = styled(Link)`
     width: 0;
     height: 2px;
     background-color: ${props => props.theme.colors.primary};
-    transition: width 0.3s ease;
+    transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   }
   
   &:hover, &.active {
@@ -110,6 +111,7 @@ const MobileToggle = styled.button`
   cursor: pointer;
   color: ${props => props.scrolled || props.open ? props.theme.colors.primary : props.theme.colors.white};
   z-index: 1001;
+  transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
     display: block;
@@ -130,11 +132,14 @@ const Navbar = () => {
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      // Using window.requestAnimationFrame to optimize performance
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
+      });
     };
     
     window.addEventListener('scroll', handleScroll);
