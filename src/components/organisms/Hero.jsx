@@ -1,14 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-scroll';
 import { FaArrowRight } from 'react-icons/fa';
 import Container from '../atoms/Container';
 import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
-
-// Import a temporary placeholder image for the hero
 import HeroBgImage from '../../assets/hero-bg.jpg';
+
+// Animation keyframes
+const fadeInUp = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const HeroSection = styled.section`
   height: 100vh;
@@ -36,6 +46,8 @@ const HeroContent = styled.div`
   position: relative;
   z-index: 2;
   max-width: 650px;
+  opacity: 0;
+  animation: ${fadeInUp} 1.6s ease forwards;
 `;
 
 const ButtonGroup = styled.div`

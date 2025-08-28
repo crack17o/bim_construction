@@ -7,11 +7,9 @@ import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion'; // <-- ajout
 
-// Import a placeholder image for the about section
-import AboutImageSrc from '../../assets/about-image.jpg';
-
-const AboutWrapper = styled.div`
+const AboutWrapper = styled(motion.div)` /* <-- animation globale */
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
@@ -22,7 +20,7 @@ const AboutWrapper = styled.div`
   }
 `;
 
-const AboutImage = styled.div`
+const AboutImage = styled(motion.div)` /* <-- animation image */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -39,7 +37,7 @@ const AboutImage = styled.div`
   }
 `;
 
-const AboutContent = styled.div``;
+const AboutContent = styled(motion.div)``; // <-- animation contenu
 
 const FeatureList = styled.ul`
   list-style: none;
@@ -50,54 +48,70 @@ const FeatureList = styled.ul`
 const FeatureItem = styled.li`
   display: flex;
   align-items: flex-start;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   
   svg {
     color: ${props => props.theme.colors.primary};
     margin-right: 10px;
-    margin-top: 5px;
+    margin-top: 3px;
   }
 `;
 
 const About = () => {
+  // animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.9, ease: "easeOut", staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
   return (
     <Section id="about" bg="lightGrey">
       <Container>
-        <AboutWrapper>
-          <AboutImage>
-            <img src={AboutImageSrc} alt="BIM Construction" />
+        <AboutWrapper
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <AboutImage variants={itemVariants}>
+            <img src='./img/WhatsApp Image 2025-08-25 at 21.37.28.jpg' alt="BIM Construction" />
           </AboutImage>
-          <AboutContent>
-            <Heading underline>
-              À propos de nous
-            </Heading>
+
+          <AboutContent variants={itemVariants}>
+            <Heading underline>À propos de nous</Heading>
             <Text>
-              BIM Construction est une entreprise de construction évoluant en République Démocratique du
-              Congo. Notre objectif est de fournir des services de construction de qualité, fiables et adaptés aux
-              besoins des clients publics et privés.
+              BIM Construction, créée en 2022, offre des solutions de construction fiables, modernes et durables en République Démocratique du Congo.
             </Text>
+
             <FeatureList>
               <FeatureItem>
                 <FaCheck />
-                <Text mb="0">Société à Responsabilité Limitée (SARL) basée à Kinshasa</Text>
+                <Text mb="0">Offrir des services de construction fiables et de qualité, respectant les délais.</Text>
               </FeatureItem>
               <FeatureItem>
                 <FaCheck />
-                <Text mb="0">Spécialiste en bâtiments, routes et infrastructures civiles</Text>
+                <Text mb="0">Devenir une référence en construction, en intégrant innovation et expertise BIM.</Text>
               </FeatureItem>
               <FeatureItem>
                 <FaCheck />
-                <Text mb="0">Plus de 10 ans d'expérience dans le secteur de la construction</Text>
+                <Text mb="0">Spécialisés dans les bâtiments, routes et infrastructures civiles.</Text>
               </FeatureItem>
               <FeatureItem>
                 <FaCheck />
-                <Text mb="0">Équipe d'ingénieurs et de techniciens qualifiés</Text>
+                <Text mb="0">Une équipe d’ingénieurs et de techniciens qualifiés à votre service.</Text>
               </FeatureItem>
             </FeatureList>
+
             <Link to="contact" smooth={true} duration={500}>
-              <Button>
-                Contactez-nous
-              </Button>
+              <Button>Contactez-nous</Button>
             </Link>
           </AboutContent>
         </AboutWrapper>

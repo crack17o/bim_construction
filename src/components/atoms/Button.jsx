@@ -18,7 +18,7 @@ const Button = styled.button`
 
   &:hover {
     background-color: transparent;
-    color: ${props => props.theme.colors[props.variant || 'primary']};
+    color: '#999'
   }
 
   ${props => props.outline && `

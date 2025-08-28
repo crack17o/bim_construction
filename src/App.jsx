@@ -13,8 +13,9 @@ import Footer from './components/organisms/Footer';
 
 const theme = {
   colors: {
-    primary: '#0B2545', // Bleu Foncé
+    primary: '#130866', // Bleu Foncé
     white: '#FFFFFF',
+    myblue: '#0065D1',
     lightGrey: '#F5F5F5',
     grey: '#DDDDDD',
     darkGrey: '#333333',
