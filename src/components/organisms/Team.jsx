@@ -23,7 +23,7 @@ const Team = () => {
     {
       id: 1,
       image: './img/dany.jpg',
-      name: 'Arch Daniel mbusa',
+      name: 'Archi Daniel mbusa',
       position: 'Directeur gérant ',
       facebook: 'https://facebook.com/',
       twitter: 'https://twitter.com/',
