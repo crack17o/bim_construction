@@ -32,7 +32,7 @@ const Team = () => {
     },
     {
       id: 2,
-      image: './img/Capture_d_écran_2025-08-28_005628-removebg-preview.png',
+      image: './img/dany.jpg',
       name: 'Ir Kennedy syatsukwa',
       position: 'Directeur Technique',
       facebook: 'https://facebook.com/',
@@ -42,7 +42,7 @@ const Team = () => {
     },
     {
       id: 3,
-      image: './img/WhatsApp_Image_2025-08-27_at_16.06.53__1_-removebg-preview.png',
+      image: './img/dany.jpg',
       name: 'Denise Mugoli',
       position: 'Secrétaire',
       facebook: 'https://facebook.com/',
@@ -52,7 +52,7 @@ const Team = () => {
     },
     {
       id: 4,
-      image: './img/WhatsApp_Image_2025-08-27_at_16.40.02__1_-removebg-preview.png',
+      image: './img/dany.jpg',
       name: 'Ir Philémon muhindo',
       position: 'Chef de Service Génie Civil',
       facebook: 'https://facebook.com/',

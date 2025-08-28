@@ -91,7 +91,7 @@ const Contact = () => {
   // Initialize EmailJS once when component loads
   React.useEffect(() => {
     // Initialize with your User ID from emailjs.com dashboard
-    emailjs.init("Um6Q-tNCGcH6t8evr");
+    emailjs.init("_cftCT0rz9jfZe4tq");
   }, []);
 
   const handleSubmit = (e) => {
@@ -104,8 +104,8 @@ const Contact = () => {
 
     // Send email using EmailJS
     emailjs.send(
-      'service_khlu1aa', // Create this service ID in EmailJS dashboard
-      'template_84otzkd',    // Create this template ID in EmailJS dashboard
+      'service_qcykm1t', // Create this service ID in EmailJS dashboard
+      'template_7ef3q9w',    // Create this template ID in EmailJS dashboard
       {
         from_name: formData.name,
         from_email: formData.email,
