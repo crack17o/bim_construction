@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 // Heading component with variants for h1, h2, h3
 const Heading = styled.h1`
-  font-family: ${props => props.theme.fonts.main};
+  font-family: 'Libre Franklin', sans-serif;
   color: ${props => props.light ? props.theme.colors.white : props.theme.colors[props.color || 'primary']};
   margin-bottom: ${props => props.mb || '20px'};
   position: relative;
   font-weight: ${props => props.weight || '700'};
   font-size: ${props => {
-    switch(props.$as) {
+    switch (props.$as) {
       case 'h1': return 'clamp(32px, 5vw, 48px)';
       case 'h2': return 'clamp(24px, 4vw, 36px)';
       case 'h3': return 'clamp(20px, 3vw, 24px)';
