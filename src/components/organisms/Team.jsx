@@ -6,11 +6,6 @@ import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
 import TeamMember from '../molecules/TeamMember';
 
-// Import placeholder images for team members
-import Member1Image from '../../assets/team-1.jpg';
-import Member2Image from '../../assets/team-2.jpg';
-import Member3Image from '../../assets/team-3.jpg';
-import Member4Image from '../../assets/team-4.jpg';
 
 const TeamGrid = styled.div`
   display: grid;
@@ -27,9 +22,9 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      image: Member1Image,
-      name: 'Jean Mukeba',
-      position: 'Directeur Général',
+      image: './img/dany.jpg',
+      name: 'Arch Daniel mbusa',
+      position: 'Directeur gérant ',
       facebook: 'https://facebook.com/',
       twitter: 'https://twitter.com/',
       instagram: 'https://instagram.com/',
@@ -37,9 +32,9 @@ const Team = () => {
     },
     {
       id: 2,
-      image: Member2Image,
-      name: 'Marie Lukusa',
-      position: 'Directrice des Opérations',
+      image: './img/Capture_d_écran_2025-08-28_005628-removebg-preview.png',
+      name: 'Ir Kennedy syatsukwa',
+      position: 'Directeur Technique',
       facebook: 'https://facebook.com/',
       twitter: 'https://twitter.com/',
       instagram: 'https://instagram.com/',
@@ -47,9 +42,9 @@ const Team = () => {
     },
     {
       id: 3,
-      image: Member3Image,
-      name: 'Patrick Kayembe',
-      position: 'Ingénieur en Chef',
+      image: './img/WhatsApp_Image_2025-08-27_at_16.06.53__1_-removebg-preview.png',
+      name: 'Denise Mugoli',
+      position: 'Secrétaire',
       facebook: 'https://facebook.com/',
       twitter: 'https://twitter.com/',
       instagram: 'https://instagram.com/',
@@ -57,9 +52,9 @@ const Team = () => {
     },
     {
       id: 4,
-      image: Member4Image,
-      name: 'Sophie Mbuyi',
-      position: 'Architecte Principal',
+      image: './img/WhatsApp_Image_2025-08-27_at_16.40.02__1_-removebg-preview.png',
+      name: 'Ir Philémon muhindo',
+      position: 'Chef de Service Génie Civil',
       facebook: 'https://facebook.com/',
       twitter: 'https://twitter.com/',
       instagram: 'https://instagram.com/',
