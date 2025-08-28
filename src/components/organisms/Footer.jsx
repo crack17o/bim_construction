@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'; 
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
-import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import Container from '../atoms/Container';
 import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
@@ -24,6 +24,7 @@ const FooterLinks = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 `;
 
 const FooterLink = styled.li`
@@ -70,6 +71,15 @@ const SocialLink = styled.a`
   }
 `;
 
+const LogoImage = styled.img`
+  max-width: 180px;
+  height: auto;
+  
+  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+    max-width: 140px;
+  }
+`;
+
 const Copyright = styled.div`
   text-align: center;
   padding: 20px 0;
@@ -91,13 +101,13 @@ const Footer = () => {
         <FooterContent>
           <FooterColumn>
             <Heading $as="h3" light mb="20px">
-              BIM Construction
+              <LogoImage src="./img/logo.png" alt="logo BIM Construction" />
             </Heading>
             <Text light mb="20px">
               Votre partenaire de confiance pour tous vos projets de construction en République Démocratique du Congo.
             </Text>
             <SocialLinks>
-              <SocialLink href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+              <SocialLink href="https://www.facebook.com/profile.php?id=100064249621090" target="_blank" rel="noopener noreferrer">
                 <FaFacebook />
               </SocialLink>
               <SocialLink href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
@@ -106,7 +116,7 @@ const Footer = () => {
               <SocialLink href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </SocialLink>
-              <SocialLink href="https://wa.me/243XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+              <SocialLink href="https://wa.me/243846661944" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp />
               </SocialLink>
             </SocialLinks>
@@ -156,19 +166,28 @@ const Footer = () => {
             </Heading>
             <FooterLinks>
               <FooterLink>
-                <a href="#construction">Construction de bâtiments</a>
+                 <Link to="services" smooth={true} duration={500}>
+                  Travaux publics 
+                </Link>
+              
               </FooterLink>
               <FooterLink>
-                <a href="#travaux-publics">Travaux publics</a>
+                  <Link to="services" smooth={true} duration={500}>
+                  Rénovation & réhabilitation Travaux publics 
+                </Link>
+              
               </FooterLink>
               <FooterLink>
-                <a href="#renovation">Rénovation et réhabilitation</a>
+                 <Link to="services" smooth={true} duration={500}>
+                 Études techniques
+                </Link>
+             
               </FooterLink>
               <FooterLink>
-                <a href="#etudes">Études techniques</a>
-              </FooterLink>
-              <FooterLink>
-                <a href="#conseil">Conseil en ingénierie</a>
+                  <Link to="services" smooth={true} duration={500}>
+                   Conseil en ingénierie 
+                </Link>
+              
               </FooterLink>
             </FooterLinks>
           </FooterColumn>
@@ -181,19 +200,25 @@ const Footer = () => {
               <FooterLink>
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
                   <FaMapMarkerAlt />
-                  123 Avenue Lumumba, Kinshasa
+                  Av. de l'école n°451 C/Gombe, Kinshasa, RDC
                 </a>
               </FooterLink>
               <FooterLink>
-                <a href="tel:+243XXXXXXXXX">
+                <a href="tel:+243846661944">
                   <FaPhone />
-                  +243 XX XXX XXXX
+                  +243 846 661 944
                 </a>
               </FooterLink>
               <FooterLink>
-                <a href="mailto:info@bimconstruction.com">
+                <a href="mailto:Constructionbim77@gmail.com">
                   <FaEnvelope />
-                  info@bimconstruction.com
+                  Constructionbim77@gmail.com
+                </a>
+              </FooterLink>
+              <FooterLink>
+                <a>
+                  <FaClock />
+                  Lun - Ven: 8h00 - 17h00
                 </a>
               </FooterLink>
             </FooterLinks>

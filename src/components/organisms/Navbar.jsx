@@ -14,7 +14,7 @@ const NavbarWrapper = styled.header`
   background-color: ${props => props.scrolled ? props.theme.colors.white : 'transparent'};
   box-shadow: ${props => props.scrolled ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none'};
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  padding: ${props => props.scrolled ? '10px 0' : '20px 0'};
+  padding: ${props => props.scrolled ? '10px 0' : '10px 0'};
   &:before {
     content: '';
     position: absolute;
@@ -34,6 +34,23 @@ const NavbarContainer = styled(Container)`
   justify-content: space-between;
 `;
 
+// const Logo = styled.a`
+//   font-size: 24px;
+//   font-weight: 700;
+//   color: ${props => props.scrolled || props.menuOpen ? props.theme.colors.primary : props.theme.colors.white};
+//   text-decoration: none;
+//   display: flex;
+//   align-items: center;
+//   transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+//   position: relative;
+//   z-index: 1;
+  
+//   span {
+//     color: ${props => props.theme.colors.primary};
+//   }
+// `;
+
+
 const Logo = styled.a`
   font-size: 24px;
   font-weight: 700;
@@ -44,11 +61,23 @@ const Logo = styled.a`
   transition: color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   position: relative;
   z-index: 1;
-  
+ 
+  height: 50px; /* fixe une hauteur max pour la zone du logo */
+
+  img {
+    max-height: 100%; /* ne dépasse pas la hauteur fixée */
+    width: auto;      /* garde les proportions */
+    
+    @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+      max-height: 60px; /* un peu plus petit sur mobile */
+    }
+  }
+
   span {
     color: ${props => props.theme.colors.primary};
   }
 `;
+
 
 const NavLinks = styled.nav`
   display: flex;
@@ -85,12 +114,12 @@ const NavItem = styled(Link)`
     left: 0;
     width: 0;
     height: 2px;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: ${props => props.theme.colors.myblue};
     transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
   }
   
   &:hover, &.active {
-    color: ${props => props.theme.colors.primary};
+    color: ${props => props.theme.colors.myblue};
     
     &:after {
       width: 100%;
@@ -158,7 +187,8 @@ const Navbar = () => {
     <NavbarWrapper scrolled={scrolled}>
       <NavbarContainer>
         <Logo href="#" scrolled={scrolled} menuOpen={menuOpen}>
-          BIM Construction
+           {scrolled ?  <img src="./img/logoo.png" alt="LOGO_bim" /> : <img src="./img/logo.png" alt="LOGO_bim" />}
+      
         </Logo>
         
         <MobileToggle onClick={toggleMenu} scrolled={scrolled} open={menuOpen}>
@@ -228,7 +258,7 @@ const Navbar = () => {
           </NavItem>
           
           <WhatsAppButton 
-            href="https://wa.me/243XXXXXXXXX" 
+            href="https://wa.me/243846661944" 
             target="_blank" 
             rel="noopener noreferrer"
           >

@@ -236,7 +236,7 @@ const Contact = () => {
                   Adresse
                 </Text>
                 <Text light mb="0">
-                  123 Avenue Lumumba, Kinshasa, RDC
+                  Av,de l'ecole n°451 C/Gombe, Kinshasa, RDC
                 </Text>
               </div>
             </ContactItem>
@@ -248,7 +248,7 @@ const Contact = () => {
                   Téléphone
                 </Text>
                 <Text light mb="0">
-                  +243 XX XXX XXXX
+                  +243 846 661 944
                 </Text>
               </div>
             </ContactItem>
@@ -260,7 +260,7 @@ const Contact = () => {
                   Email
                 </Text>
                 <Text light mb="0">
-                  info@bimconstruction.com
+                  Constructionbim77@gmail.com
                 </Text>
               </div>
             </ContactItem>
