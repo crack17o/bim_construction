@@ -72,11 +72,22 @@ const HeroContent = styled.div`
 // Typing heading dynamique
 const TypingHeading = styled(Heading)`
   overflow: hidden;
-  white-space: nowrap;
   border-right: 3px solid white;
   display: inline-block;
   animation: ${blink} 0.8s step-end infinite;
+
+  /* Par défaut : pas de retour à la ligne */
+  white-space: nowrap;
+
+  /* Sur mobile : on autorise le retour à la ligne */
+  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+    white-space: normal;
+    font-size: 1.6rem; /* réduire un peu la taille */
+    line-height: 1.3;
+    word-break: break-word;
+  }
 `;
+
 
 // Texte qui fade-in après le titre
 const AnimatedText = styled(Text)`
