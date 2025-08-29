@@ -22,7 +22,7 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      image: './img/dany.svg',
+      image: 'https://res.cloudinary.com/dbwuzqvgn/image/upload/v1756481730/488257218_1061926652625646_5958412063235767317_n_moslap.jpg',
       name: 'Archi Daniel mbusa',
       position: 'Directeur gérant ',
      
