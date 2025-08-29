@@ -64,7 +64,7 @@ const SocialIcon = styled.a`
   }
 `;
 
-const TeamMember = ({ image, name, position, facebook, twitter, instagram, linkedin }) => {
+const TeamMember = ({ image, name, position}) => {
   return (
     <TeamMemberWrapper>
       <MemberImage>
@@ -77,7 +77,7 @@ const TeamMember = ({ image, name, position, facebook, twitter, instagram, linke
         <Text size="small" mb="15px" weight="500" color="primary">
           {position}
         </Text>
-        <SocialIcons>
+        {/* <SocialIcons>
           {facebook && (
             <SocialIcon href={facebook} target="_blank" rel="noopener noreferrer">
               <FaFacebook />
@@ -98,7 +98,7 @@ const TeamMember = ({ image, name, position, facebook, twitter, instagram, linke
               <FaLinkedin />
             </SocialIcon>
           )}
-        </SocialIcons>
+        </SocialIcons> */}
       </MemberContent>
     </TeamMemberWrapper>
   );
