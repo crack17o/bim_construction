@@ -176,6 +176,11 @@ const Footer = () => {
                 </Link>
               </FooterLink>
               <FooterLink>
+                <Link to="galerie" smooth={true} duration={500}>
+                  Galerie
+                </Link>
+              </FooterLink>
+              <FooterLink>
                 <Link to="team" smooth={true} duration={500}>
                   Équipe
                 </Link>
@@ -201,7 +206,7 @@ const Footer = () => {
               </FooterLink>
               <FooterLink>
                 <Link to="services" smooth={true} duration={500}>
-                  Rénovation & réhabilitation Travaux publics
+                  Rénovation & réhabilitation
                 </Link>
 
               </FooterLink>
