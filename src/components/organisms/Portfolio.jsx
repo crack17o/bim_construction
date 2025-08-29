@@ -6,11 +6,7 @@ import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
 import ProjectCard from '../molecules/ProjectCard';
 
-// Import placeholder images for projects
-import Project1Image from '../../assets/project-1.jpg';
-import Project2Image from '../../assets/project-2.jpg';
-import Project3Image from '../../assets/project-3.jpg';
-import Project4Image from '../../assets/project-4.jpg';
+
 
 const ProjectsGrid = styled.div`
   display: grid;
@@ -25,34 +21,37 @@ const ProjectsGrid = styled.div`
 
 const Portfolio = () => {
   const projects = [
-    {
-      id: 1,
-      image: Project1Image,
-      title: 'Tour Résidentielle Moderna',
-      category: 'Bâtiment Résidentiel',
-      description: 'Construction d\'une tour résidentielle de 12 étages avec des appartements de luxe et des installations modernes.'
-    },
-    {
-      id: 2,
-      image: Project2Image,
-      title: 'Route Nationale N7',
-      category: 'Infrastructure Routière',
-      description: 'Réhabilitation et élargissement de 45 km de route nationale avec mise en place de systèmes de drainage.'
-    },
-    {
-      id: 3,
-      image: Project3Image,
-      title: 'Centre Commercial Kinshasa',
-      category: 'Bâtiment Commercial',
-      description: 'Construction d\'un centre commercial de 25 000 m² comprenant 50 magasins, restaurants et espaces de loisirs.'
-    },
-    {
-      id: 4,
-      image: Project4Image,
-      title: 'Pont sur la rivière N\'djili',
-      category: 'Infrastructure Civile',
-      description: 'Construction d\'un pont de 120 mètres enjambant la rivière N\'djili, avec voies piétonnes et voies pour véhicules.'
-    }
+   {
+  id: 1,
+  image: './img/WhatsApp Image 2025-08-28 at 08.33.34.jpeg',
+  title: 'Chantier Annexe R+1',
+  category: 'Bâtiment Résidentiel',
+  description: "Projet réalisé en 2023 à Kinshasa. Fondation assurée par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
+}
+,
+   {
+  id: 4,
+  image: './img/WhatsApp Image 2025-08-25 at 21.37.22.jpeg',
+  title: 'Immeuble Résidentiel R+2',
+  category: 'Bâtiment Résidentiel',
+  description: "Projet situé à Kinshasa (2024). Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. Phase actuelle : coulage du plancher R+1."
+},
+{
+  id: 3,
+  image: './img/IMG_20250823_110903_093.jpg',
+  title: 'Bâtiment Annexe et Commercial',
+  category: 'Bâtiment Commercial',
+  description: "Projet situé à Bunia, Ituri (2025). Conçu et réalisé par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
+},
+
+{
+  id: 5,
+  image: './img/WhatsApp Image 2025-08-25 at 21.37.26.jpeg',
+  title: 'Villa Moderne R+1',
+  category: 'Bâtiment Résidentiel',
+  description: "Projet situé à Boma, Kongo-Centrale (2025). Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. Phase actuelle : gros œuvre."
+},
+
   ];
 
   return (

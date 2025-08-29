@@ -1,7 +1,7 @@
-import React from 'react'; 
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
-import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaTiktok } from 'react-icons/fa';
 import Container from '../atoms/Container';
 import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
@@ -94,7 +94,7 @@ const Copyright = styled.div`
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <FooterSection>
       <Container>
@@ -107,21 +107,49 @@ const Footer = () => {
               Votre partenaire de confiance pour tous vos projets de construction en République Démocratique du Congo.
             </Text>
             <SocialLinks>
-              <SocialLink href="https://www.facebook.com/profile.php?id=100064249621090" target="_blank" rel="noopener noreferrer">
+              <SocialLink
+                href="https://www.facebook.com/profile.php?id=100064249621090"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook />
               </SocialLink>
-              <SocialLink href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+
+              <SocialLink
+                href="https://x.com/BIMCONSTRU60521"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTwitter />
               </SocialLink>
-              <SocialLink href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+
+              <SocialLink
+                href="https://www.instagram.com/bimc.onstruction?igsh=MWQwNXdxdnkwZHJheQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </SocialLink>
-              <SocialLink href="https://wa.me/243846661944" target="_blank" rel="noopener noreferrer">
+
+              <SocialLink
+                href="https://wa.me/243846661944"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaWhatsapp />
               </SocialLink>
+
+              <SocialLink
+                href="https://www.tiktok.com/@bimconstruction1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTiktok />
+              </SocialLink>
             </SocialLinks>
+
           </FooterColumn>
-          
+
           <FooterColumn>
             <Heading $as="h3" light mb="20px">
               Liens Rapides
@@ -159,39 +187,39 @@ const Footer = () => {
               </FooterLink>
             </FooterLinks>
           </FooterColumn>
-          
+
           <FooterColumn>
             <Heading $as="h3" light mb="20px">
               Services
             </Heading>
             <FooterLinks>
               <FooterLink>
-                 <Link to="services" smooth={true} duration={500}>
-                  Travaux publics 
+                <Link to="services" smooth={true} duration={500}>
+                  Travaux publics
                 </Link>
-              
+
               </FooterLink>
               <FooterLink>
-                  <Link to="services" smooth={true} duration={500}>
-                  Rénovation & réhabilitation Travaux publics 
+                <Link to="services" smooth={true} duration={500}>
+                  Rénovation & réhabilitation Travaux publics
                 </Link>
-              
+
               </FooterLink>
               <FooterLink>
-                 <Link to="services" smooth={true} duration={500}>
-                 Études techniques
+                <Link to="services" smooth={true} duration={500}>
+                  Études techniques
                 </Link>
-             
+
               </FooterLink>
               <FooterLink>
-                  <Link to="services" smooth={true} duration={500}>
-                   Conseil en ingénierie 
+                <Link to="services" smooth={true} duration={500}>
+                  Conseil en ingénierie
                 </Link>
-              
+
               </FooterLink>
             </FooterLinks>
           </FooterColumn>
-          
+
           <FooterColumn>
             <Heading $as="h3" light mb="20px">
               Contact
@@ -225,7 +253,7 @@ const Footer = () => {
           </FooterColumn>
         </FooterContent>
       </Container>
-      
+
       <Copyright>
         <Container>
           <Text light mb="0" center>

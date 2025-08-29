@@ -22,43 +22,27 @@ const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      image: './img/dany.jpg',
+      image: './img/dany.svg',
       name: 'Archi Daniel mbusa',
       position: 'Directeur gérant ',
-      facebook: 'https://facebook.com/',
-      twitter: 'https://twitter.com/',
-      instagram: 'https://instagram.com/',
-      linkedin: 'https://linkedin.com/'
+     
     },
+
+    
     {
       id: 2,
-      image: './img/dany.jpg',
+      image: './img/dany.svg',
       name: 'Ir Kennedy syatsukwa',
       position: 'Directeur Technique',
-      facebook: 'https://facebook.com/',
-      twitter: 'https://twitter.com/',
-      instagram: 'https://instagram.com/',
-      linkedin: 'https://linkedin.com/'
+ 
     },
-    {
-      id: 3,
-      image: './img/dany.jpg',
-      name: 'Denise Mugoli',
-      position: 'Secrétaire',
-      facebook: 'https://facebook.com/',
-      twitter: 'https://twitter.com/',
-      instagram: 'https://instagram.com/',
-      linkedin: 'https://linkedin.com/'
-    },
+
     {
       id: 4,
-      image: './img/dany.jpg',
+      image: './img/dany.svg',
       name: 'Ir Philémon muhindo',
       position: 'Chef de Service Génie Civil',
-      facebook: 'https://facebook.com/',
-      twitter: 'https://twitter.com/',
-      instagram: 'https://instagram.com/',
-      linkedin: 'https://linkedin.com/'
+     
     }
   ];
 
@@ -79,10 +63,7 @@ const Team = () => {
               image={member.image}
               name={member.name}
               position={member.position}
-              facebook={member.facebook}
-              twitter={member.twitter}
-              instagram={member.instagram}
-              linkedin={member.linkedin}
+             
             />
           ))}
         </TeamGrid>
