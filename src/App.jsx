@@ -10,10 +10,11 @@ import Portfolio from './components/organisms/Portfolio';
 import Team from './components/organisms/Team';
 import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 const theme = {
   colors: {
-    primary: '#130866', // Bleu Foncé
+    primary: '#130866',
     white: '#FFFFFF',
     myblue: '#0065D1',
     lightGrey: '#F5F5F5',
@@ -60,21 +61,50 @@ const ScrollToTopButton = styled.button`
   }
 `;
 
+// Cercles du curseur
+const CursorCircle = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 2px solid ${props => props.color};
+  z-index: 9999;
+`;
+
 function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
+  // Motion values pour lag fluide
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 300 };
+
+  const circle1X = useSpring(mouseX, springConfig);
+  const circle1Y = useSpring(mouseY, springConfig);
+  const circle2X = useSpring(mouseX, { ...springConfig, stiffness: 200 });
+  const circle2Y = useSpring(mouseY, { ...springConfig, stiffness: 200 });
+  const circle3X = useSpring(mouseX, { ...springConfig, stiffness: 150 });
+  const circle3Y = useSpring(mouseY, { ...springConfig, stiffness: 150 });
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
+      setShowScrollToTop(window.scrollY > 300);
     };
-
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    const handleMouseMove = e => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [mouseX, mouseY]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -83,6 +113,20 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <AppContainer>
+        {/* Trois cercles avec lag */}
+        <CursorCircle
+          style={{ width: 15, height: 15, x: circle1X, y: circle1Y }}
+          color={theme.colors.primary}
+        />
+        <CursorCircle
+          style={{ width: 25, height: 25, x: circle2X, y: circle2Y }}
+          color={theme.colors.myblue}
+        />
+        <CursorCircle
+          style={{ width: 35, height: 35, x: circle3X, y: circle3Y }}
+          color={theme.colors.white}
+        />
+
         <Navbar />
         <Hero />
         <About />
@@ -92,6 +136,7 @@ function App() {
         <Team />
         <Contact />
         <Footer />
+
         <ScrollToTopButton visible={showScrollToTop} onClick={scrollToTop}>
           <FaArrowUp />
         </ScrollToTopButton>

@@ -23,7 +23,7 @@ const Portfolio = () => {
   const projects = [
    {
   id: 1,
-  image: './img/WhatsApp Image 2025-08-28 at 08.33.34.jpeg',
+  image: 'https://res.cloudinary.com/dbwuzqvgn/image/upload/v1756484671/WhatsApp_Image_2025-08-28_at_08.33.34_pzxnec.jpg',
   title: 'Chantier Annexe R+1',
   category: 'Bâtiment Résidentiel',
   description: "Projet réalisé en 2023 à Kinshasa. Fondation assurée par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
