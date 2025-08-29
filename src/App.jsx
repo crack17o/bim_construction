@@ -11,6 +11,7 @@ import Team from './components/organisms/Team';
 import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import Galerie from './components/organisms/Galerie';
 
 const theme = {
   colors: {
@@ -131,8 +132,8 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Values />
         <Portfolio />
+        <Galerie/>
         <Team />
         <Contact />
         <Footer />

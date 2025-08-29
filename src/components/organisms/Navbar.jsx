@@ -216,7 +216,7 @@ const Navbar = () => {
           >
             Services
           </NavItem>
-          <NavItem 
+          {/* <NavItem 
             to="values" 
             smooth={true} 
             duration={500} 
@@ -225,7 +225,9 @@ const Navbar = () => {
             onClick={closeMenu}
           >
             Valeurs
-          </NavItem>
+          </NavItem> */}
+
+          
           <NavItem 
             to="portfolio" 
             smooth={true} 
@@ -236,6 +238,18 @@ const Navbar = () => {
           >
             Portfolio
           </NavItem>
+
+           <NavItem 
+            to="galerie" 
+            smooth={true} 
+            duration={500} 
+            scrolled={scrolled}
+            menuOpen={menuOpen}
+            onClick={closeMenu}
+          >
+            Galerie
+          </NavItem>
+
           <NavItem 
             to="team" 
             smooth={true} 
