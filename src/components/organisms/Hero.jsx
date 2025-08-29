@@ -120,8 +120,14 @@ const Hero = () => {
   // === Gestion typing dynamique ===
   const phrases = [
     "Des solutions de qualité pour vos projets",
-    "Un partenaire fiable pour vos routes",
-    "Construisons ensemble vos bâtiments"
+    "Construisons ensemble vos bâtiments",
+    "Votre projet entre des mains sûres.",
+
+    "La rigueur et la fiabilité au cœur de chaque chantier.",
+
+    "Des engagements respectés, des résultats garantis.",
+
+    "Une entreprise sur laquelle vous pouvez compter."
   ];
   const [text, setText] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -169,7 +175,7 @@ const Hero = () => {
           </TypingHeading>
 
           <AnimatedText light size="large" maxWidth="550px">
-            BIM Construction est votre partenaire de confiance en République Démocratique du Congo 
+            BIM Construction est votre partenaire de confiance en République Démocratique du Congo
             pour la construction de bâtiments, routes et infrastructures civiles.
           </AnimatedText>
 

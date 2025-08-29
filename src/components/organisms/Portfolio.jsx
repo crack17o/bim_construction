@@ -87,7 +87,7 @@ const Portfolio = () => {
           Notre Portfolio
         </Heading>
         <Text center maxWidth="700px" style={{ margin: '0 auto 30px' }}>
-          Découvrez quelques-uns de nos projets phares qui démontrent notre expertise et notre engagement envers l'excellence.
+          Voici quelques-uns de nos projets récents, témoignant de notre expertise et de notre engagement envers l’excellence.
         </Text>
 
         <ProjectsGrid>

@@ -73,25 +73,25 @@ const Team = () => {
     {
       id: 1,
       image: './img/dany.svg',
-      name: 'Archi Daniel Mbusa',
+      name: 'Architecte Daniel Mbusa',
       position: 'Directeur Gérant',
     },
     {
       id: 2,
       image: './img/dany.svg',
-      name: 'Ir Kennedy Syatsukwa',
+      name: 'Ingenieur Kennedy Syatsukwa',
       position: 'Directeur Technique',
     },
     {
       id: 3,
       image: './img/dany.svg',
-      name: 'Archi Elie Tuluenga',
+      name: 'Architecte Elie Tuluenga',
       position: 'Directeur Administratif et Financier',
     },
     {
       id: 4,
       image: './img/dany.svg',
-      name: 'Ir Philémon Muhindo',
+      name: 'Ingenieur Philémon Muhindo',
       position: 'Chef de Service Génie Civil',
     }
   ];

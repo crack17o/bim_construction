@@ -259,6 +259,9 @@ const Footer = () => {
           <Text light mb="0" center>
             &copy; {currentYear} BIM Construction. Tous droits réservés.
           </Text>
+            <Text light mb="0" center>
+            Designed by <strong>JeJ</strong>
+          </Text>
         </Container>
       </Copyright>
     </FooterSection>
