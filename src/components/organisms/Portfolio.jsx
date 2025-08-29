@@ -50,43 +50,43 @@ const cardVariants = {
 
 const Portfolio = () => {
   const projects = [
-    {
-      id: 1,
-      image: 'https://res.cloudinary.com/dbwuzqvgn/image/upload/v1756484671/WhatsApp_Image_2025-08-28_at_08.33.34_pzxnec.jpg',
-      title: 'Chantier Annexe R+1',
-      category: 'Bâtiment Résidentiel',
-      description: "Projet réalisé à Kinshasa. Fondation assurée par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
-    },
-    {
-      id: 4,
-      image: './img/WhatsApp Image 2025-08-25 at 21.37.22.jpeg',
-      title: 'Immeuble Résidentiel R+2',
-      category: 'Bâtiment Résidentiel',
-      description: "Projet situé à Kinshasa. Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. Phase actuelle : coulage du plancher R+1."
-    },
-    {
-      id: 3,
-      image: './img/IMG_20250823_110903_093.jpg',
-      title: 'Bâtiment Annexe et Commercial',
-      category: 'Bâtiment Commercial',
-      description: "Projet situé à Bunia, Ituri . Conçu et réalisé par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
-    },
-    {
-      id: 5,
-      image: './img/WhatsApp Image 2025-08-25 at 21.37.26.jpeg',
-      title: 'Villa Moderne R+1',
-      category: 'Bâtiment Résidentiel',
-      description: "Projet situé à Boma, Kongo-Centrale . Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. Phase actuelle : gros œuvre."
-    },
-    {
-      id: 6,
-      image: './img/487505150_1060966096055035_505964319337371848_n.jpg', // remplace par le chemin réel
-      title: 'Immeuble Appartement R+3',
-      category: 'Bâtiment Résidentiel',
-      description: "Projet situé à Kinshasa. Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. L’immeuble de type R+3 comprend des appartements modernes avec finitions de haute qualité, intégrant des espaces communs fonctionnels et sécurisés."
-    }
+  {
+    id: 1,
+    image: 'https://res.cloudinary.com/dbwuzqvgn/image/upload/v1756484671/WhatsApp_Image_2025-08-28_at_08.33.34_pzxnec.jpg',
+    title: 'Chantier Annexe R+1',
+    category: 'Bâtiment Résidentiel',
+    description: "Chantier en cours à Kinshasa. Fondation assurée par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
+  },
+  {
+    id: 4,
+    image: './img/WhatsApp Image 2025-08-25 at 21.37.22.jpeg',
+    title: 'Immeuble Résidentiel R+2',
+    category: 'Bâtiment Résidentiel',
+    description: "Chantier en cours à Kinshasa. Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. Phase actuelle : coulage du plancher R+1."
+  },
+  {
+    id: 3,
+    image: './img/IMG_20250823_110903_093.jpg',
+    title: 'Bâtiment Annexe et Commercial',
+    category: 'Bâtiment Commercial',
+    description: "Chantier en cours à Bunia, Ituri. Conçu et réalisé par BIM Construction (maître d'œuvre), pour un maître d'ouvrage privé."
+  },
+  {
+    id: 5,
+    image: './img/WhatsApp Image 2025-08-25 at 21.37.26.jpeg',
+    title: 'Villa Moderne R+1',
+    category: 'Bâtiment Résidentiel',
+    description: "Chantier en cours à Boma, Kongo-Centrale. Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. Phase actuelle : gros œuvre."
+  },
+  {
+    id: 6,
+    image: './img/487505150_1060966096055035_505964319337371848_n.jpg',
+    title: 'Immeuble Appartement R+3',
+    category: 'Bâtiment Résidentiel',
+    description: "Chantier en cours à Kinshasa. Réalisé par BIM Construction (maître d'œuvre) pour un maître d'ouvrage privé. L’immeuble de type R+3 comprend des appartements modernes avec finitions de haute qualité, intégrant des espaces communs fonctionnels et sécurisés."
+  }
+];
 
-  ];
 
   return (
     <Section id="portfolio" bg="lightGrey">
